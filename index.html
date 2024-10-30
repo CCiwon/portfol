@@ -21,21 +21,25 @@
   </head>
   <body>
     <!--header-->
-    <header>
-      <div>
-        <img src="./images/cat.ico" alt="logo" />
-        <h1><a href="#">Siwon</a></h1>
-        <nav>
-          <ul>
-            <li><a href="#home">홈으로</a></li>
-            <li><a href="#about">시원</a></li>
-            <li><a href="#skills">기술</a></li>
-            <li><a href="#work">포트폴리오</a></li>
-            <li><a href="#license">자격증</a></li>
-            <li><a href="#contact">연락처</a></li>
+    <header class="header">
+        <div class="header__logo">
+        
+    
+        <img class= "header__logo_img"src="./images/cat.ico" alt="logo" />
+        <h1 class="header__logo__title"><a href="#">Siwon</a></h1>
+        <nav class="header__nav">
+        </div>
+          <ul class="header__menu">
+            <li><a href="#home" class="header__menu__item active">홈으로</a></li>
+            <li><a href="#about" class="header__menu__item">시원</a></li>
+            <li><a href="#skills" class="header__menu__item">기술</a></li>
+            <li><a href="#work" class="header__menu__item">포트폴리오</a></li>
+            <li><a href="#license" class="header__menu__item">자격증</a></li>
+            <li><a href="#contact" class="header__menu__item">연락처</a></li>
           </ul>
+        
         </nav>
-      </div>
+      
     </header>
     <!--main-->
     <main>
@@ -48,9 +52,9 @@
       </section>
 
       <!--about-->
-      <section id="about">
-        <h2>강시원</h2>
-        <p>
+      <section id="about" class="section max-container">
+        <h2 class="title">강시원</h2>
+        <p class="description">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. A doloribus
           possimus ad recusandae ut temporibus minima id aliquid exercitationem
           porro blanditiis, ipsum, sunt, in commodi assumenda minus perferendis
@@ -85,9 +89,10 @@
       </section>
 
       <!--skills-->
-      <section id="skills">
-        <h2>기술</h2>
-        <p>언어 및 도구</p>
+      <section id="skills" class="section">
+        <div class="max-container">
+        <h2 class="title">기술</h2>
+        <p class="description">언어 및 도구</p>
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid
           ipsum perspiciatis cum quam vitae dolor quidem porro pariatur aliquam
@@ -139,12 +144,14 @@
             </ul>
            </section>
         </div>
+      </div>
       </section>
 
       <!--work-->
-      <section id="work">
-        <h2>포트폴리오</h2>
-        <p>Projects</p>
+      <section id="work" class="section">
+        <div class="max-container">
+        <h2 class="title">포트폴리오</h2>
+        <p class="description">Projects</p>
         <ul>
             <li><button>ALL <span>10</span></button></li>
             <li><button>Front-end <span>3</span></button></li>
@@ -225,13 +232,14 @@
                 </a>
             </li>
         </ul>
+     </div>
 
       </section>
 
       <!--license-->
-      <section id="license">
-        <h2>자격증</h2>
-        <p>국가 기술 자격증</p>
+      <section id="license" class="section max-container">
+        <h2 class="title">자격증</h2>
+        <p class="description">국가 기술 자격증</p>
         <ul>
             <li>
                 <img src="./images/image2.jpeg" alt="정보처리기사">
@@ -257,9 +265,6 @@
         </ul>
       </section>
 
-      <!--contact-->
-      <section id="contact"></section>
-
       <!--Aroow up-->
       <aside>
         <a href="#home" title="위로">
@@ -268,9 +273,10 @@
       </aside>
     </main>
     <!--footer-->
-    <footer id="contact">
-      <h2>연락주세요</h2>
-      <p>cwkang2589@gamil.com</p>
+    <footer id="contact" class="section">
+        <div class="max-container">
+      <h2 class="title">연락주세요</h2>
+      <p class="description">cwkang2589@gamil.com</p>
       <ul>
         <li>
           <a href="https://github.com/CCiwon" target="_black" title="깃허브"
@@ -284,6 +290,7 @@
         </li>
       </ul>
       <p>ⓒ Siwon - All rights reserved</p>
+    </div>
     </footer>
   </body>
 </html>
