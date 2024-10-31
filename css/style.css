@@ -463,3 +463,18 @@ button:focus{
 .contact__link:hover{
     color: var(--color-accent);
 }
+@media screen and (max-width: 768px) {
+    .container {
+      width: 100%; 
+      padding: 10px; 
+    }
+    
+    .header, .footer {
+      font-size: 14px; 
+    }
+    
+    .content {
+      display: block; 
+    }
+  }
+  
