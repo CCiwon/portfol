@@ -14,6 +14,7 @@
     <meta property="og:image" content="배포후 생성된 이미지 url" />
     <link rel="stylesheet" href="./css/style.css" />
     <script src="./js/main.js" defer></script>
+    <script src="./js/projects.js" defer></script>
     <!--Font Awesome-->
     <script
       src="https://kit.fontawesome.com/a4da45d0e7.js"
@@ -156,13 +157,13 @@
         <h2 class="title">포트폴리오</h2>
         <p class="description">Projects</p>
         <ul class="categories">
-          <li><button class="category category--selected">ALL <span class="category__count">10</span></button></li>
-          <li><button class="category category">Front-end <span class="category__count">5</span></button></li>
-          <li><button class="category category">Mobile <span class="category__count">3</span></button></li>
-          <li><button class="category category">Back-end <span class="category__count">7</span></button></li>
+          <li><button class="category category--selected" data-category="all">ALL <span class="category__count">10</span></button></li>
+          <li><button class="category category" data-category="font-end">Front-end <span class="category__count">5</span></button></li>
+          <li><button class="category category" data-category="mobile">Mobile <span class="category__count">3</span></button></li>
+          <li><button class="category category" data-category="back-end">Back-end <span class="category__count">7</span></button></li>
         </ul>
         <ul class="projects">
-            <li class="project">
+            <li class="project" data-type="font-end">
                 <a href="#" target="_blank">
                     <img class="project__img" src="./images/images.jpeg" alt="project1">
                     <div class="project__metadata">
@@ -171,7 +172,7 @@
                     </div>
                 </a>
             </li>
-            <li class="project">
+            <li class="project" data-type="back-end">
               <a href="#" target="_blank">
                   <img class="project__img" src="./images/images.jpeg" alt="project1">
                   <div class="project__metadata">
@@ -180,7 +181,7 @@
                   </div>
               </a>
           </li>
-          <li class="project">
+          <li class="project" data-type="mobile">
             <a href="#" target="_blank">
                 <img class="project__img" src="./images/images.jpeg" alt="project1">
                 <div class="project__metadata">
@@ -189,7 +190,7 @@
                 </div>
             </a>
         </li>
-        <li class="project">
+        <li class="project" data-type="font-end">
           <a href="#" target="_blank">
               <img class="project__img" src="./images/images.jpeg" alt="project1">
               <div class="project__metadata">
@@ -198,7 +199,7 @@
               </div>
           </a>
       </li>
-      <li class="project">
+      <li class="project" data-type="back-end">
         <a href="#" target="_blank">
             <img class="project__img" src="./images/images.jpeg" alt="project1">
             <div class="project__metadata">
@@ -207,7 +208,7 @@
             </div>
         </a>
      </li>
-     <li class="project">
+     <li class="project" data-type="font-end">
       <a href="#" target="_blank">
           <img class="project__img" src="./images/images.jpeg" alt="project1">
           <div class="project__metadata">
@@ -216,7 +217,7 @@
           </div>
       </a>
     </li>
-    <li class="project">
+    <li class="project" data-type="mobile">
      <a href="#" target="_blank">
          <img class="project__img" src="./images/images.jpeg" alt="project1">
         <div class="project__metadata">
@@ -225,7 +226,7 @@
         </div>
     </a>
 </li>
-<li class="project">
+<li class="project" data-type="back-end">
   <a href="#" target="_blank">
       <img class="project__img" src="./images/images.jpeg" alt="project1">
       <div class="project__metadata">
