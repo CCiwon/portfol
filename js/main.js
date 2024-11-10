@@ -42,3 +42,73 @@ navbarToggle.addEventListener('click',()=>{
 navbarMenu.addEventListener('click',()=>{
     navbarMenu.classList.remove('open')
 })
+
+// Intersection Observer 설정
+const sections = document.querySelectorAll('section');
+const menuItems = document.querySelectorAll('.header__menu__item');
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      const id = entry.target.id;
+      const menuItem = document.querySelector(`.header__menu__item[href="#${id}"]`);
+      
+      if (entry.isIntersecting) {
+        menuItems.forEach(item => item.classList.remove('active'));
+        menuItem.classList.add('active');
+      }
+    });
+  },
+  {
+    threshold: 0.5 // 50% 이상 보일 때
+  }
+);
+
+sections.forEach((section) => observer.observe(section));
+
+// 부드러운 스크롤
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
+});
+
+let isScrolling = false;
+let timeoutId = null;
+
+
+
+
+window.addEventListener('scroll', () => {
+  if (isScrolling) return;  
+
+  const scrollPosition = window.scrollY;
+
+  sections.forEach((section, index) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+
+    if (scrollPosition >= sectionTop - sectionHeight / 2 && scrollPosition < sectionTop + sectionHeight) {
+      
+      if (timeoutId) {
+        clearTimeout(timeoutId); 
+      }
+      timeoutId = setTimeout(() => {
+        isScrolling = true; 
+        section.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+        isScrolling = false; 
+      }, 300);
+
+      menuItems[index].classList.add('active');
+    } else {
+      menuItems[index].classList.remove('active');
+    }
+  });
+});
